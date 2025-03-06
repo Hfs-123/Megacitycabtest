@@ -12,7 +12,7 @@ import java.util.List;
 
 public class UserDAO {
 
-    // Login Method (Checks both users and employees)
+   
 	public User loginUser(String email, String password) { 
 	    User user = null;
 	    String query = "SELECT user_id, name, email, phone, nic, address, password_hash, role FROM users WHERE email = ? " +
@@ -35,18 +35,18 @@ public class UserDAO {
 	                throw new IllegalStateException("Your account has been deactivated. Please contact support.");
 	            }
 
-	            // Password check for hashed and plain passwords
+	            
 	            if (hashedPassword.startsWith("$2a$")) { 
 	                if (!BCrypt.checkpw(password, hashedPassword)) {
-	                    return null; // Wrong password
+	                    return null; 
 	                }
 	            } else {
 	                if (!hashedPassword.equals(password)) {
-	                    return null; // Wrong password
+	                    return null; 
 	                }
 	            }
 
-	            // Create user object only if everything is correct
+	            
 	            user = new User();
 	            user.setUserId(rs.getString("user_id"));
 	            user.setName(rs.getString("name"));
@@ -57,7 +57,7 @@ public class UserDAO {
 	            user.setRole(role);
 	        }
 	    } catch (IllegalStateException e) {
-	        throw e; // Rethrow the deactivated account message
+	        throw e; 
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
