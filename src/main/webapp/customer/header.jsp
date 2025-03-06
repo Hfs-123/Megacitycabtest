@@ -24,7 +24,7 @@
         </nav>
 
         <div class="nav-icons">
-            <a href="<%= request.getContextPath() %>/customer/customerProfile.jsp" class="profile-icon" title="Profile">
+            <a href="<%= request.getContextPath() %>/customer/Profile.jsp" class="profile-icon" title="Profile">
                 <i class="fas fa-user-circle"></i>
             </a>
             <a href="<%= request.getContextPath() %>/landing.jsp" class="exit-icon" title="Logout">
