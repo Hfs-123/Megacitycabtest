@@ -1,0 +1,133 @@
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Body Styling ===== */
+body {
+    background: #f4f7fc;
+}
+
+/* ===== Container ===== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* ===== Register Card ===== */
+.register-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #003d80;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.sub-text {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* ===== Input Fields ===== */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #0056b3;
+    background: white;
+    outline: none;
+}
+
+/* ===== Buttons ===== */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 48%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background:#00b32c;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #003d80;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #495057;
+    transform: scale(1.05);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .register-card {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+}

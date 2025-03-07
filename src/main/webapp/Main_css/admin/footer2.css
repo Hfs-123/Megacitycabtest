@@ -1,0 +1,86 @@
+/* ===== Footer Styling ===== */
+.footer {
+    background: linear-gradient(to right, #003d80, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* ===== MegaCityCab Branding ===== */
+.footer-logo h2, .copyright {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.mega {
+    color: white;
+}
+
+.city {
+    color: #ffcc00;
+}
+
+.cab {
+    color: white;
+}
+
+/* ===== Footer Links ===== */
+.footer-links {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+/* ===== Social Media Icons ===== */
+.social-icons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffcc00;
+}
+
+/* ===== Copyright Text ===== */
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+}

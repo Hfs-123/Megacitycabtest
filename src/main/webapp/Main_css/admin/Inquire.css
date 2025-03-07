@@ -1,0 +1,92 @@
+/* ===== Global Styles ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    height: 100%;
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 50px;
+}
+
+.reply-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Inquiry Card ===== */
+.inquiry-card {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.inquiry-card p {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+/* ===== Header & Footer ===== */
+header, footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+/* ===== Reply Form ===== */
+.reply-form .form-group {
+    margin-bottom: 20px;
+}
+
+.reply-form label {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.reply-form textarea {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    resize: none;
+}
+
+.reply-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reply-form button:hover {
+    background-color: #0056b3;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .reply-container {
+        padding: 20px;
+    }
+
+    .reply-form button {
+        padding: 10px 15px;
+    }
+}

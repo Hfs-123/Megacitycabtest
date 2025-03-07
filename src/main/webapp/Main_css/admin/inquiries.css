@@ -1,0 +1,81 @@
+/* ===== Global Styles ===== */
+html, body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Table Styling ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* ===== Button Styling ===== */
+.btn-info {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-info:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ===== Header Styling ===== */
+h2 {
+    color: #007bff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .btn-info {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
