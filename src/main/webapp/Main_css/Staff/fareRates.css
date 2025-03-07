@@ -1,0 +1,90 @@
+/* ===== Background & Layout ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #eaf6ff, #d0eaff);
+}
+
+/* ===== Main Content Styling ===== */
+.main-content {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.container {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.8); /* Soft background color */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Heading ===== */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ===== Card Container ===== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ===== Fare Rate Card Styling ===== */
+.fare-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 280px;
+    max-width: 100%;
+}
+
+.fare-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.fare-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0056b3;
+    transition: color 0.3s;
+}
+
+.fare-card:hover h4 {
+    color: #ff5733;
+}
+
+.fare-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .fare-card {
+        padding: 15px;
+    }
+
+    .fare-card h4 {
+        font-size: 1.3rem;
+    }
+
+    .fare-card p {
+        font-size: 0.9rem;
+    }
+}

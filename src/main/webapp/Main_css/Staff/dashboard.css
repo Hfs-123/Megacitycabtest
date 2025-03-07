@@ -1,0 +1,141 @@
+/* ===== General Styles ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f8ff; /* Light background with a touch of blue */
+}
+
+/* ===== Layout ===== */
+.dashboard-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #eaf6ff, #d0eaff); /* Gradient background */
+}
+
+.container {
+    flex: 1;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+    font-size: 2.5rem;
+    color: #444;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ===== Dashboard Cards ===== */
+.dashboard-card {
+    text-decoration: none;
+    width: 100%;
+}
+
+.custom-card {
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Hover effect on card title */
+.card-title:hover {
+    color: #0056b3;
+}
+
+/* ===== Card Text and Style Variations ===== */
+.card-body p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.4;
+}
+
+/* ===== Footer Styles (Example, you can modify based on your requirements) ===== */
+footer {
+    background-color: #2d3e50;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+footer .footer-links {
+    margin-bottom: 15px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ffa500;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .dashboard-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .dashboard-container {
+        padding-bottom: 40px;
+    }
+
+    .custom-card {
+        margin-bottom: 15px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+}
