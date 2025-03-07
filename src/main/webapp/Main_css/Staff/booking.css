@@ -1,0 +1,125 @@
+/* ===== General Styles ===== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9; /* Light gray for clean look */
+}
+
+.main-content {
+    min-height: calc(100vh - 60px); /* Push footer to bottom */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+.container {
+    flex: 1;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a90e2; /* Light blue for modern feel */
+}
+
+/* ===== Table Styling ===== */
+.table {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table thead {
+    background: #343a40;
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* ===== Action Buttons ===== */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 100px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ===== See More Button ===== */
+.btn-info {
+    background: #4a90e2;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-info:hover {
+    background: #357ac9;
+}
+
+/* ===== Modal Styling ===== */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background: #4a90e2;
+    color: white;
+}
+
+.modal-body p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #4a90e2;
+    }
+}
