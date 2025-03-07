@@ -2,11 +2,9 @@
 <%@ page import="com.dao.admin.RateDAO,com.model.admin.FareRate, java.util.List" %>
 <%@ page session="true" %>
 <%
-
     String adminId = (String) session.getAttribute("adminId");
 
     if (adminId == null) {
-       
         response.sendRedirect(request.getContextPath() + "/login.jsp");
         return;
     }
@@ -16,22 +14,25 @@
     RateDAO fareDAO = new RateDAO();
     List<FareRate> fareRates = fareDAO.getAllFareRates();
 %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fare Rates</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/all_css/admin/Fare3.css">
+    <title>Fare Rates Management</title>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/Main_css/admin/Fare3.css">
 </head>
 <body>
 <%@ include file="header.jsp" %>
+    <!-- Dashboard Container -->
     <div class="dashboard-container">
-        <!-- Return to Fare Management Button -->
+        <!-- Return Button -->
         <div class="top-right-container">
-            <a href="FareManagement.jsp" class="return-btn">Return</a>
+            <a href="Fare.jsp" class="return-btn">Return</a>
         </div>
 
-        <h1>Fare Rates</h1>
+        <!-- Fare Rates Table -->
+        <h1>Fare Rates Management</h1>
         <table class="fare-table">
             <thead>
                 <tr>
@@ -54,7 +55,7 @@
                         <td><%= fare.isTaxEnabled() ? fare.getTaxRate() + "%" : "No Tax" %></td>
                         <td><%= fare.getDiscount() %>%</td>
                         <td>
-                            <a href="EditFareRate.jsp?id=<%= fare.getId() %>" class="btn edit-btn">Edit</a>
+                            <a href="EditRate.jsp?id=<%= fare.getId() %>" class="btn edit-btn">Edit</a>
                             <a href="DeleteFareRateServlet?id=<%= fare.getId() %>" class="btn delete-btn" onclick="return confirm('Are you sure?');">Delete</a>
                         </td>
                     </tr>
@@ -62,7 +63,6 @@
             </tbody>
         </table>
     </div>
-    <%@ include file="footer.jsp" %>
-    
+<%@ include file="footer.jsp" %>
 </body>
 </html>

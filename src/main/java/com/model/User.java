@@ -62,7 +62,7 @@ public class User {
 
    
     public String getEmployeeId() {
-        if (role != null && (role.equalsIgnoreCase("admin") || role.equalsIgnoreCase("manager") || role.equalsIgnoreCase("driver"))) {
+        if (role != null && (role.equalsIgnoreCase("admin") || role.equalsIgnoreCase("Staff") || role.equalsIgnoreCase("driver"))) {
             return userId; 
         }
         return null; 

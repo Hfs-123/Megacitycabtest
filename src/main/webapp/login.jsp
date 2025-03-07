@@ -12,6 +12,20 @@
     <div class="auth-container">
         <div class="auth-box">
             <h2>Login to <span class="megacity">Mega</span><span class="city">City</span><span class="cab">Cab</span></h2>
+
+            <!-- Display Success or Error Messages -->
+            <% 
+                String successMessage = (String) session.getAttribute("successMessage");
+                String errorMessage = (String) session.getAttribute("errorMessage");
+                if (successMessage != null) { 
+            %>
+                <p class="success-message"><%= successMessage %></p>
+            <% session.removeAttribute(""); } %>
+
+            <% if (errorMessage != null) { %>
+                <p class="error-message"><%= errorMessage %></p>
+            <% session.removeAttribute("errorMessage"); } %>
+
             <form action="login" method="post">
                 <div class="input-box">
                     <label for="email">Email</label>

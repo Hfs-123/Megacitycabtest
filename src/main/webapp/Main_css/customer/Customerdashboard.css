@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(to right, #ffcc00, #ff6600);
+   background: linear-gradient(135deg, #eaf6ff, #d0eaff);
+
     font-family: 'Poppins', sans-serif;
     color: #333;
     margin: 0;
@@ -18,12 +19,12 @@ body {
 .dashboard-header h2 {
     font-size: 2.5em;
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 .dashboard-header p {
     font-size: 1.2em;
-    color: white;
+    color: black;
     margin-bottom: 30px;
 }
 

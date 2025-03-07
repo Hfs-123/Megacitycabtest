@@ -13,7 +13,6 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-  
     private static final String ADMIN_EMAIL = "admin@megacitycab.com";
     private static final String ADMIN_PASSWORD = "1111";
 
@@ -24,38 +23,39 @@ public class LoginServlet extends HttpServlet {
 
         HttpSession session = request.getSession();
 
-    
+        // Admin Login
         if (ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password)) {
             session.setAttribute("adminId", "EMP001"); 
             session.setAttribute("adminName", "Admin User");
             System.out.println("Admin logged in successfully!");
 
-            response.sendRedirect(request.getContextPath() + "/admin/AdminDashboard.jsp");
-            return; // Important to stop further processing
+            response.sendRedirect(request.getContextPath() + "/Admin/AdminDashboard.jsp");
+            return; 
         }
 
-        
+        // Regular User Login
         UserDAO userDAO = UserFactory.getUserDAO();
         User user = userDAO.loginUser(email, password);
 
         if (user != null) {
             session.setAttribute("user", user);
+         
 
-            String role = user.getRole().toLowerCase().trim(); 
+            String role = user.getRole().toLowerCase().trim();
             System.out.println("User Role: " + role);
 
             String redirectURL = request.getContextPath();
             switch (role) {
-                case "manager":
-                    session.setAttribute("managerId", user.getEmployeeId()); 
-                    redirectURL += "/manager/managerDashboard.jsp";
+                case "staff":
+                    session.setAttribute("StaffId", user.getEmployeeId());
+                    redirectURL += "/Staff/StaffDashboard.jsp";
                     break;
                 case "driver":
-                    session.setAttribute("driverId", user.getEmployeeId()); 
+                    session.setAttribute("driverId", user.getEmployeeId());
                     redirectURL += "/driver/driverDashboard.jsp";
                     break;
                 case "customer":
-                    session.setAttribute("userId", user.getUserId()); 
+                    session.setAttribute("userId", user.getUserId());
                     redirectURL += "/customer/CustomerDashboard.jsp";
                     break;
                 default:
@@ -67,8 +67,8 @@ public class LoginServlet extends HttpServlet {
             System.out.println("Redirecting to: " + redirectURL);
             response.sendRedirect(redirectURL);
         } else {
-            request.setAttribute("error", "Invalid credentials!");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            session.setAttribute("errorMessage", "Invalid login! Please try again.");
+            response.sendRedirect("login.jsp");
         }
     }
 }

@@ -56,7 +56,7 @@
 			<div class="dashboard-tile">
 				<i class="fas fa-user-circle tile-icon"></i>
 				<h3>View Profile</h3>
-				<a href="customerProfile.jsp" class="btn btn-primary">Go to Profile</a>
+				<a href="Profile.jsp" class="btn btn-primary">Go to Profile</a>
 			</div>
 
 		</div>

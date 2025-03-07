@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/admin/UpdateCarServlet")
+@WebServlet("/Admin/UpdateCarServlet")
 public class UpdateCarServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -23,7 +23,7 @@ public class UpdateCarServlet extends HttpServlet {
         boolean success = carDAO.updateCar(carID, model, plateNumber, status);
 
         if (success) {
-            response.sendRedirect("CarSection.jsp?update=success");
+            response.sendRedirect("Car.jsp?update=success");
         } else {
             response.sendRedirect("UpdateCar.jsp?id=" + carID + "&error=failed");
         }

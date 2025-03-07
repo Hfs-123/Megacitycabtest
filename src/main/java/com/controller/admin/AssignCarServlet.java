@@ -20,12 +20,12 @@ public class AssignCarServlet extends HttpServlet {
 
             boolean success = carDAO.assignCarToEmployee(employeeId, carId);
             if (success) {
-                response.sendRedirect(request.getContextPath() + "/admin/adminAssignCar.jsp?assigned=true");
+                response.sendRedirect(request.getContextPath() + "/admin/adminAssigning.jsp?assigned=true");
             } else {
-                response.sendRedirect(request.getContextPath() + "/admin/adminAssignCar.jsp?assigned=false");
+                response.sendRedirect(request.getContextPath() + "/admin/adminAssigning.jsp?assigned=false");
             }
         } catch (NumberFormatException e) {
-            response.sendRedirect(request.getContextPath() + "/admin/adminAssignCar.jsp?assigned=invalid");
+            response.sendRedirect(request.getContextPath() + "/admin/adminAssigning.jsp?assigned=invalid");
         }
     }
 }

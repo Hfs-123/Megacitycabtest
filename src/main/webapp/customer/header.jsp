@@ -11,8 +11,12 @@
 <body>
     <header class="header">
         <div class="logo-container">
-            <img src="<%= request.getContextPath() %>/component/pictures/car6.png" alt="MegaCityCab Logo" class="logo">
-            <h1 class="brand-name">Mega<span class="accent-text">City</span>Cab</h1>
+          
+                <h1 class="brand-name">
+                <span class="white-text">Mega</span><span class="orange-text">City</span><span class="blue-text">Cab</span> 
+                <span class="orange-text">| Welcome</span> <span class="blue-text">Back</span>
+                
+            </h1>
         </div>
 
         <nav class="nav-links">

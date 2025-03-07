@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/admin/AddCarServlet")
+@WebServlet("/Admin/AddCarServlet")
 public class AddCarServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -20,6 +20,6 @@ public class AddCarServlet extends HttpServlet {
 
         CarDAO carDAO = new CarDAO();
         carDAO.addCar(model, plateNumber, status);
-        response.sendRedirect("CarSection.jsp");
+        response.sendRedirect("Car.jsp");
     }
 }

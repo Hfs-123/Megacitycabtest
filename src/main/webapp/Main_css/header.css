@@ -1,14 +1,12 @@
-/* header Styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: Arial, sans-serif;
 }
 
 /* Header Styling */
@@ -16,60 +14,61 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    color: #333;
+    background: #1E2A47;  /* Deep Blue Background */
+    color: white;
     padding: 15px 30px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid #f1f1f1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     flex-wrap: wrap;
 }
 
-/* Logo and Branding */
+/* Logo and Brand */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
 .logo {
-    width: 70px;
+    width: 80px;
     height: auto;
-    margin-right: 12px;
+    margin-right: 10px;
 }
 
 .brand-name {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #444;
 }
 
-.accent-text {
-    color: #ff9800;
+.blue-text {
+    color: #007BFF;  /* Blue */
+}
+
+.orange-text {
+    color: #FFA500;  /* Orange */
 }
 
 /* Navigation Links */
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 .nav-item {
-    color: #555;
+    color: white;
     font-size: 1rem;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     padding: 5px 10px;
 }
 
 .nav-item i {
-    font-size: 1.1rem;
-    color: #ff9800;
+    font-size: 1.2rem;
 }
 
 .nav-item:hover {
-    color: #ff9800;
+    color: #FFA500;  /* Hover effect Orange */
 }
 
 /* Navigation Icons */
@@ -79,14 +78,14 @@ body {
 }
 
 .nav-icons a {
-    color: #777;
-    font-size: 1.4rem;
+    color: white;
+    font-size: 1.5rem;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 .nav-icons a:hover {
-    color: #ff9800;
+    color: #FFA500;  /* Hover effect Orange */
 }
 
 /* Responsive Design */
@@ -104,7 +103,6 @@ body {
     .nav-links {
         flex-direction: column;
         gap: 10px;
-        text-align: center;
     }
 
     .nav-icons {
